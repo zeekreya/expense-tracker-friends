@@ -28,7 +28,7 @@ const Profile = () => {
 
     const updateUser = (userId, data) => {
         try {
-            let apiUrl = `http://localhost:5000/updateUser?_id=${userId}`;
+            let apiUrl = `https://expense-tracker-friends.onrender.com//updateUser?_id=${userId}`;
             axios.put(apiUrl, data).then((response) => {
                 console.log(response.data);
                 alert(response.data.message);
