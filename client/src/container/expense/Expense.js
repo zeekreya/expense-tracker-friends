@@ -12,7 +12,7 @@ const Expense = () => {
 
     const addExpense = async (data) => {
         try {
-            let apiUrl = `http://localhost:5000/saveExpence`;
+            let apiUrl = `https://expense-tracker-friends.onrender.com//saveExpence`;
             axios.post(apiUrl, data).then((response) => {
                 alert(response.data.message);
             }).catch((error) => {
