@@ -16,7 +16,7 @@ const Home = () => {
 
     const getFrineds = async (userId) => {
         try {
-            let apiUrl = `http://localhost:5000/readExpence?user=${userId}`
+            let apiUrl = `https://expense-tracker-friends.onrender.com//readExpence?user=${userId}`
             axios.get(apiUrl).then((response) => {
                 if (response.data.data) {
                     setBalance(response.data.data);
