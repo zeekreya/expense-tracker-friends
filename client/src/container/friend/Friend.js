@@ -17,7 +17,7 @@ const Friend = () => {
 
     const deleteFrineds = async (userId) => {
         try {
-            let apiUrl = `http://localhost:5000/deleteFriend?user=${userId}`
+            let apiUrl = `https://expense-tracker-friends.onrender.com//deleteFriend?user=${userId}`
             axios.delete(apiUrl).then((response) => {
                 if (response.data.data) {
                     getFrineds(userData?._id);
@@ -34,7 +34,7 @@ const Friend = () => {
 
     const getFrineds = async (userId) => {
         try {
-            let apiUrl = `http://localhost:5000/get-friends?user=${userId}`
+            let apiUrl = `https://expense-tracker-friends.onrender.com//get-friends?user=${userId}`
             axios.get(apiUrl).then((response) => {
                 if (response.data.data) {
                     setFreinds(response.data.data);
