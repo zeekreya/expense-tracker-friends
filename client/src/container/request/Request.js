@@ -17,7 +17,7 @@ const Request = () => {
 
     const getRequests = async (userId) => {
         try {
-            let apiUrl = `http://localhost:5000/readfriend?user=${userId}`
+            let apiUrl = `https://expense-tracker-friends.onrender.com//readfriend?user=${userId}`
             axios.get(apiUrl).then((response) => {
                 if (response.data.data) {
                     setRequest(response.data.data);
@@ -34,7 +34,7 @@ const Request = () => {
 
     const searchUser = async (str) => {
         try {
-            let apiUrl = `http://localhost:5000/readUser?phone=${str}`
+            let apiUrl = `https://expense-tracker-friends.onrender.com//readUser?phone=${str}`
             axios.get(apiUrl).then((response) => {
                 if (response.data.data) {
                     setSearchResult(response.data.data);
@@ -51,7 +51,7 @@ const Request = () => {
 
     const updateRequest = async (requestId, data) => {
         try {
-            let apiUrl = `http://localhost:5000/updatefriend?_id=${requestId}`
+            let apiUrl = `https://expense-tracker-friends.onrender.com//updatefriend?_id=${requestId}`
             axios.put(apiUrl, data).then((response) => {
                 alert(response.data.message);
                 if (response.data.success) {
@@ -69,7 +69,7 @@ const Request = () => {
 
     const sendRequest = async (data) => {
         try {
-            let apiUrl = `http://localhost:5000/savefriend`
+            let apiUrl = `https://expense-tracker-friends.onrender.com//savefriend`
             axios.post(apiUrl, data).then((response) => {
                 console.log(response.data);
                 alert(response.data.message);
