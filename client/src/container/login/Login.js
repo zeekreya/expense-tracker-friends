@@ -20,7 +20,7 @@ const Login = () => {
 
     const loginUser = (data) => {
         try {
-            let apiUrl = `https://expense-tracker-friends.onrender.com//readUser?phone=${data.phone}&password=${data.password}`
+const apiUrl = `${process.env.REACT_APP_API_URL}/readUser?phone=${data.phone}&password=${data.password}`;          
             axios.get(apiUrl).then((response) => {
                 if (response.data.data.length) {
                     alert("Authenticated successfully")
