@@ -14,7 +14,7 @@ import MainLayout from './component/main-layout/MainLayout';
 
 function App() {
   return (
-    <div style={{ backgroundImage: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5PehOmuTcr4vWKiO3raKEy2JIm85xNG61hmGQFjpR_A&s=10, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
+    <div style={{ backgroundImage:  "url('/background.jfif')", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login />} />
