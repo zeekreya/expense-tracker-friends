@@ -14,7 +14,7 @@ import MainLayout from './component/main-layout/MainLayout';
 
 function App() {
   return (
-    <div style={{ backgroundImage:  "url('/background.jfif')", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
+    <div className="ambient-bg min-vh-100 w-100">
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login />} />

@@ -19,7 +19,7 @@ const saveUser = async (req, res) => {
 const readUser = async (req, res) => {
     try {
         let query = req.query;
-        userData = await user.find(query).exec();
+        let userData = await user.find(query).exec();
         res.json({
             message: "user read successfull",
             success: true,

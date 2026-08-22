@@ -6,5 +6,6 @@ friendRouter.post("/savefriend", saveFriend);
 friendRouter.get("/readfriend", readFriend);
 friendRouter.put("/updatefriend", updateFriend);
 friendRouter.delete("/deletefriend", deleteFriend);
+friendRouter.delete("/deleteFriend", deleteFriend);
 friendRouter.get("/get-friends", getFriends);
 module.exports = friendRouter;

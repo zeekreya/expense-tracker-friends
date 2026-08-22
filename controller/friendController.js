@@ -71,12 +71,23 @@ const updateFriend = async (req, res) => {
 }
 const deleteFriend = async (req, res) => {
     try {
-        let query = {
-            $or: [
-                { user: req.query.user },
-
-                { frined: req.query.user }
-            ]
+        let query;
+        if (req.query.user && req.query.friend) {
+            query = {
+                $or: [
+                    { user: req.query.user, friend: req.query.friend },
+                    { user: req.query.friend, friend: req.query.user }
+                ]
+            };
+        } else if (req.query.user) {
+            query = {
+                $or: [
+                    { user: req.query.user },
+                    { friend: req.query.user }
+                ]
+            };
+        } else {
+            query = req.query;
         }
         let friendData = await friend.findOneAndDelete(query).exec();
         res.json({

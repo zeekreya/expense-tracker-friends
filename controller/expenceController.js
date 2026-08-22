@@ -30,7 +30,7 @@ const saveExpence = async (req, res) => {
 const readExpence = async (req, res) => {
     try {
         let query = req.query;
-        expenceData = await expense.find(query).populate("friend").exec();
+        let expenceData = await expense.find(query).populate("friend user").exec();
         res.json({
             mesage: "expense read successfull",
             success: true,
