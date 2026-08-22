@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Wallet, Phone, User, TrendingUp, TrendingDown, Layers, ArrowUpRight, ArrowDownRight, CheckCircle2 } from "lucide-react";
+import { Wallet, Phone,  TrendingUp, TrendingDown, Layers, ArrowUpRight, ArrowDownRight, CheckCircle2 } from "lucide-react";
 import API_BASE_URL from "../../config/api";
 import "./Home.css";
 
