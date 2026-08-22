@@ -1,7 +1,7 @@
 import { Button, Form } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { DollarSign, PlusCircle, Users, CheckCircle2, Phone } from "lucide-react";
+import { DollarSign, PlusCircle, Users,  Phone } from "lucide-react";
 import API_BASE_URL from "../../config/api";
 import "./Expense.css";
 
